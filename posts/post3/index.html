@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Literature Review: &#39;&#39;How to get started in quantum computing&#39;&#39;  // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Literature Review: &#39;&#39;How to get started in quantum computing&#39;&#39; "/>
+<meta name="twitter:description" content="(Last updated: June 3, 2021)
+Summary David Matthews&#39; paper &ldquo;How to get started in quantum computing,&rdquo; by Nature News, is an excellent survey paper of today&rsquo;s state of computing. Published online just a few months ago on 4 March 2021, it summarizes fundamental ideas behind quantum computing motivating new research. The paper names leading companies and institutions who have been contributing to the swiftly growing field, and it distinguishes a few broad aspects of their approach."/>
+
+    <meta property="og:title" content="Literature Review: &#39;&#39;How to get started in quantum computing&#39;&#39; " />
+<meta property="og:description" content="(Last updated: June 3, 2021)
+Summary David Matthews&#39; paper &ldquo;How to get started in quantum computing,&rdquo; by Nature News, is an excellent survey paper of today&rsquo;s state of computing. Published online just a few months ago on 4 March 2021, it summarizes fundamental ideas behind quantum computing motivating new research. The paper names leading companies and institutions who have been contributing to the swiftly growing field, and it distinguishes a few broad aspects of their approach." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-03T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-03T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Literature Review: &#39;&#39;How to get started in quantum computing&#39;&#39; </h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 3, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p><em>(Last updated: June 3, 2021)</em></p>
+<h3 id="summary">Summary</h3>
+<p>David Matthews' paper &ldquo;How to get started in quantum computing,&rdquo; by Nature News, is an excellent survey paper of today&rsquo;s state of computing. Published online just a few months ago on 4 March 2021, it summarizes fundamental ideas behind quantum computing motivating new research. The paper names leading companies and institutions who have been contributing to the swiftly growing field, and it distinguishes a few broad aspects of their approach. Beginners can use this paper as a springboard into the world of quantum computing. Below, I summarize a few key points.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h3 id="exploring-ideas-behind-quantum-computing">Exploring Ideas Behind Quantum Computing</h3>
+<p>Quantum circuits consist of gates that operate on qubits, the quantum computer&rsquo;s equivalent of a classical bit. These qubits use quantum properties with the potential to speed up calculations for special classes of problems. Right now, their use is extremely limited, and we don&rsquo;t know the extent to which they might improve our computational situation. We are in the early stages, since we don&rsquo;t yet have a computer with more than 100 qubits, and most of our problems will require computers with thousands of qubits. Hence, most research has been theoretical; only a few experiements have been conducted on real quantum machines.</p>
+<blockquote>
+<p>&ldquo;The stage of quantum computers now is something like classical computing in the late 1980s&hellip; Most of the work done now is to prove that quantum, in the future, may have the ability to solve interesting problems.&rdquo; ~ Sara Metwalli, quantum-computing researcher at Keio University, Tokyo</p>
+</blockquote>
+<p>The digital logic behind qubits is more complex than the logic behind bits. Instead of operating under the rules of Boolean Algebra, it has been modeled with linear algebra:</p>
+<blockquote>
+<p>&ldquo;Quantum computing is essentially matrix vector multiplication - it&rsquo;s linear algebra underneath the hood.&rdquo; ~ Krysta Svore, principal manager of quantum-computing group at Microsoft Research</p>
+</blockquote>
+<h3 id="important-datesmilestones">Important Dates/Milestones</h3>
+<ul>
+<li>
+<p>2019: Google demonstrated landmark quantum speedup: their 54-qubit quantum computer took minutes to solve a solution that would take a classical computer over 10,000 years to solve</p>
+</li>
+<li>
+<p>2021: IBM hopes to produce a 1,000 qubit machine</p>
+</li>
+</ul>
+<h3 id="online-learning">Online Learning</h3>
+<ul>
+<li>Quantum Country: <a href="https://quantum.country">https://quantum.country</a></li>
+<li>IBM&rsquo;s interactive toolkit for Qiskit quantum language: <a href="https://qiskit.org/textbook/preface.html">https://qiskit.org/textbook/preface.html</a></li>
+</ul>
+<h3 id="programming-resources">Programming Resources</h3>
+<p>Emulator:</p>
+<ul>
+<li>IBM&rsquo;s Quantum Experience: <a href="https://quantum-computing.ibm.com">https://quantum-computing.ibm.com</a></li>
+</ul>
+<blockquote>
+<ul>
+<li>Create simulations of quantum circuits in web browser</li>
+<li>May run remotely on real quantum computer</li>
+</ul>
+</blockquote>
+<p>Languages/Environments Developed by Technology Giants:</p>
+<ul>
+<li>Q# (Microsoft)</li>
+<li>Qiskit (IBM)</li>
+<li>Cirq (Google)</li>
+</ul>
+<p>Languages/Environments Developed by Non-Giants:</p>
+<ul>
+<li>Forest (Rigetti Computing in Berkeley, CA)</li>
+<li>tket (Cambridge Quantum Computing, UK)</li>
+<li>Silq (Swiss Federal Institute of Technology (ETH), Zurich)</li>
+</ul>
+<blockquote>
+<ul>
+<li>Based on &lsquo;uncomputation&rsquo;</li>
+</ul>
+</blockquote>
+<ul>
+<li>Quipper (Dalhousie University?)</li>
+</ul>
+<blockquote>
+<ul>
+<li>Less user friendly: functional language, not based on Python (imperative)</li>
+</ul>
+</blockquote>
+<h3 id="where-are-the-physical-computers">Where Are the Physical Computers?</h3>
+<p>Note, it is highly recommended that researchers test their circuits on emulators before trying them out on a real quantum machine.</p>
+<ul>
+<li>IBM</li>
+</ul>
+<blockquote>
+<ul>
+<li>5-qubit machine freely available</li>
+<li>More powerful machines available to IBM&rsquo;s Quantum Network</li>
+</ul>
+</blockquote>
+<ul>
+<li>Microsoft</li>
+</ul>
+<blockquote>
+<ul>
+<li>Offers limited free access to other firms' quantum computers through Azure Quantum platform</li>
+</ul>
+</blockquote>
+<ul>
+<li>Amazon Web Services</li>
+</ul>
+<blockquote>
+<ul>
+<li>Cloud-computing platform that utilizes other firm&rsquo;s quantum devices for $1 per quantum circuit</li>
+</ul>
+</blockquote>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Matthews, David. “How to Get Started in Quantum Computing.” Nature News, Nature Publishing Group, 1 Mar. 2021, <a href="http://www.nature.com/articles/d41586-021-00533-x">www.nature.com/articles/d41586-021-00533-x</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

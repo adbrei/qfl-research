@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Federated Learning on Quantum Federated Learning Blog</title>
+    <link>https://adbrei.github.io/qfl-research/tags/quantum-federated-learning/</link>
+    <description>Recent content in Quantum Federated Learning on Quantum Federated Learning Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/quantum-federated-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to My Research</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post1/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post1/</guid>
+      <description>Testing images&amp;hellip;
+Federated Deep Learning on Quantum Computers Welcome to my blog about my undergraduage honors computer science research! I am excited to start working this summer in preparation for my senior year at William &amp;amp; Mary.
+Brief Summary Many edge devices, such as cell phones, contribute to and require feedback from a shared deep learning algorithm hosted on a server. For example, Siri, Next-Word-Prediction, and other messaging apps include auto-complete features that attempt to finish users’ words or sentences.</description>
+    </item>
+    
+  </channel>
+</rss>

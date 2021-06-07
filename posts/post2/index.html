@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Classical versus Quantum Computing // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Classical versus Quantum Computing"/>
+<meta name="twitter:description" content="(Last updated: June 3, 2021)
+There exist a plethora of methods of computation. The most commonly used computation is classical computation. Here, we explore the basic differences between classical and quantum.
+Classical Computing Also known as binary computing, classical computing is a system of computation that uses bits (represented by 0 and 1) to logically store and manipulate information. Historically, all computers from Babbage&rsquo;s theoretical &ldquo;analytical machine&rdquo; to the supercomputers produced by Hewlett Packard Enterprise&rsquo;s subsidiary, Cray Inc."/>
+
+    <meta property="og:title" content="Classical versus Quantum Computing" />
+<meta property="og:description" content="(Last updated: June 3, 2021)
+There exist a plethora of methods of computation. The most commonly used computation is classical computation. Here, we explore the basic differences between classical and quantum.
+Classical Computing Also known as binary computing, classical computing is a system of computation that uses bits (represented by 0 and 1) to logically store and manipulate information. Historically, all computers from Babbage&rsquo;s theoretical &ldquo;analytical machine&rdquo; to the supercomputers produced by Hewlett Packard Enterprise&rsquo;s subsidiary, Cray Inc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-02T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-02T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Classical versus Quantum Computing</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 2, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p><em>(Last updated: June 3, 2021)</em></p>
+<p>There exist a plethora of methods of computation. The most commonly used computation is classical computation. Here, we explore the basic differences between classical and quantum.</p>
+<h3 id="classical-computing">Classical Computing</h3>
+<p>Also known as binary computing, classical computing is a system of computation that uses bits (represented by 0 and 1) to logically store and manipulate information. Historically, all computers from Babbage&rsquo;s theoretical &ldquo;analytical machine&rdquo; to the supercomputers produced by Hewlett Packard Enterprise&rsquo;s subsidiary, Cray Inc., have operated according to classical computing <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Classical computers have overcome massive computation feats, made increasingly possible by small and faster transitors. Consequently, we seek to solve harder problems that require greater amounts of computing power. But soon this won&rsquo;t be possible to achieve with classical computers. Moore&rsquo;s Law is becoming less of a reality<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>,  and when we are no longer able to reduce the size of transitors, we must look beyond classical computers for new ways of solving increasingly complex problems.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h3 id="quantum-computing">Quantum Computing</h3>
+<p>Quantum computing is a system of computation that uses qubits (represented by 0, 1, or both in a phenenma called superposition) to store and manipulate information. Instead of relying on classical mechanics, this system is based on quantum mechanics, where each qubit is a spin. We can express many properties of quantum computing using linear algebra and matrix multiplication.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> For example, if we consider qubits as vectors, then 0 (&ldquo;spin up&rdquo; represented as |0&gt; ) and 1 (&ldquo;spin down&rdquo; represented as |1&gt; ) are the two basis states <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. It is possible to have a superposition of these states, where the general state of all the qubits is a unit vector in 2^n-dimensional complex space, where n is the number of qubits <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>The properties of quantum mechanics gives a new perspective of complex calculations. For a subset of special cases, it drastically improves performance. For this reason, quantum computing has seen a boom in the last few years and has generated a vast field of promising research <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<h3 id="comparison">Comparison:</h3>
+<p>Table of Classical versus Quantum Computing: <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left">Classical Computing</th>
+<th style="text-align:left">Quantum Computing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Used by:</td>
+<td style="text-align:left">large-scale computers</td>
+<td style="text-align:left">high-speed quantum computers</td>
+</tr>
+<tr>
+<td>Info stored in:</td>
+<td style="text-align:left">bits</td>
+<td style="text-align:left">qubits</td>
+</tr>
+<tr>
+<td>Number states:</td>
+<td style="text-align:left">2 (0 or 1)</td>
+<td style="text-align:left">infinite</td>
+</tr>
+<tr>
+<td>Calculations:</td>
+<td style="text-align:left">deterministic</td>
+<td style="text-align:left">probabilistic</td>
+</tr>
+<tr>
+<td>Data processing carried out by:     </td>
+<td style="text-align:left">logic (sequentially)</td>
+<td style="text-align:left">quantum logic (parallel-ly)</td>
+</tr>
+<tr>
+<td>Operations defined by:</td>
+<td style="text-align:left">Boolean algebra</td>
+<td style="text-align:left">Linear algebra over Hilbert space</td>
+</tr>
+<tr>
+<td>Circuit behavior:</td>
+<td style="text-align:left">defined by classical physics     </td>
+<td style="text-align:left">defined by quantum mechanics</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="references">References:</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Kitaev, A. Yu, et al. Classical and Quantum Computation. American Mathematical Society, 2002.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Moore&rsquo;s Law (Wikipedia): <a href="https://en.wikipedia.org/wiki/Moore%27s_law">https://en.wikipedia.org/wiki/Moore%27s_law</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Matthews, David. “How to Get Started in Quantum Computing.” Nature News, Nature Publishing Group, 1 Mar. 2021, <a href="http://www.nature.com/articles/d41586-021-00533-x">www.nature.com/articles/d41586-021-00533-x</a>.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Andy Matuschak and Michael A. Nielsen, “Quantum Computing for the Very Curious”, <a href="https://quantum.country/qcvc,">https://quantum.country/qcvc,</a> San Francisco (2019).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://whatis.techtarget.com/definition/classical-computing">https://whatis.techtarget.com/definition/classical-computing</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
