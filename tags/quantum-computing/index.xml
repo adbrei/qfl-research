@@ -13,10 +13,10 @@
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adbrei.github.io/qfl-research/posts/post4/</guid>
-      <description> (Last updated: June 4, 2021)
-\widehat{ac}
-I want to add a new post&amp;hellip;
-References </description>
+      <description>(Last updated: June 4, 2021)
+The paper &amp;ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&amp;rdquo; by Michael Broughton, et al. introdues the TensorFlow Quantum library with respect to implementing hybrid models that handle classical or quantum data 1. In this post, I attempt to give a brief explaination of the equations given in Section III, &amp;ldquo;Theory of Hybrid Quantum-Classical Machine Learning.&amp;rdquo;
+Equation (1) This equation&amp;hellip;
+Equation (2) Equation (3) Equation (4) Equation (5) Equation (6) Equation (7) Equation (8) Equation (9) References   Broughton, Michael, et al.</description>
     </item>
     
     <item>

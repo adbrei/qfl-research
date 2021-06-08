@@ -13,10 +13,10 @@
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adbrei.github.io/qfl-research/posts/post4/</guid>
-      <description> (Last updated: June 4, 2021)
-\widehat{ac}
-I want to add a new post&amp;hellip;
-References </description>
+      <description>(Last updated: June 4, 2021)
+The paper &amp;ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&amp;rdquo; by Michael Broughton, et al. introdues the TensorFlow Quantum library with respect to implementing hybrid models that handle classical or quantum data 1. In this post, I attempt to give a brief explaination of the equations given in Section III, &amp;ldquo;Theory of Hybrid Quantum-Classical Machine Learning.&amp;rdquo;
+Equation (1) This equation&amp;hellip;
+Equation (2) Equation (3) Equation (4) Equation (5) Equation (6) Equation (7) Equation (8) Equation (9) References   Broughton, Michael, et al.</description>
     </item>
     
     <item>
@@ -46,8 +46,7 @@ Classical Computing Also known as binary computing, classical computing is a sys
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adbrei.github.io/qfl-research/posts/post1/</guid>
-      <description>Testing images&amp;hellip;
-Federated Deep Learning on Quantum Computers Welcome to my blog about my undergraduage honors computer science research! I am excited to start working this summer in preparation for my senior year at William &amp;amp; Mary.
+      <description>Federated Deep Learning on Quantum Computers Welcome to my blog about my undergraduage honors computer science research! I am excited to start working this summer in preparation for my senior year at William &amp;amp; Mary.
 Brief Summary Many edge devices, such as cell phones, contribute to and require feedback from a shared deep learning algorithm hosted on a server. For example, Siri, Next-Word-Prediction, and other messaging apps include auto-complete features that attempt to finish users’ words or sentences.</description>
     </item>
     
