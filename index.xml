@@ -6,7 +6,17 @@
     <description>Recent content on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post6/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post6/</guid>
+      <description>(Last updated: June 9, 2021)
+So far, the majority of my blog posts concentrate on aspects of Quantum Computing. Today I&amp;rsquo;d like to shift gears to the other side of my research: Federated Learning (FL). My goal is to glean a better intuitive understanding of the mathematical equations that represent the FL framework. I start with Saheed Tijani&amp;rsquo;s article &amp;ldquo;Federated Learning: Why, What and How&amp;rdquo; that was posted on LinkedIn on 14 April 2020.</description>
+    </item>
+    
     <item>
       <title>Literature Review: &#39;&#39;Explainer: What is a Quantum Computer?&#39;&#39;</title>
       <link>https://adbrei.github.io/qfl-research/posts/post5/</link>

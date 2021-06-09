@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39; // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;"/>
+<meta name="twitter:description" content="(Last updated: June 9, 2021)
+So far, the majority of my blog posts concentrate on aspects of Quantum Computing. Today I&rsquo;d like to shift gears to the other side of my research: Federated Learning (FL). My goal is to glean a better intuitive understanding of the mathematical equations that represent the FL framework. I start with Saheed Tijani&rsquo;s article &ldquo;Federated Learning: Why, What and How&rdquo; that was posted on LinkedIn on 14 April 2020."/>
+
+    <meta property="og:title" content="Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;" />
+<meta property="og:description" content="(Last updated: June 9, 2021)
+So far, the majority of my blog posts concentrate on aspects of Quantum Computing. Today I&rsquo;d like to shift gears to the other side of my research: Federated Learning (FL). My goal is to glean a better intuitive understanding of the mathematical equations that represent the FL framework. I start with Saheed Tijani&rsquo;s article &ldquo;Federated Learning: Why, What and How&rdquo; that was posted on LinkedIn on 14 April 2020." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post6/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-09T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-09T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 9, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p><em>(Last updated: June 9, 2021)</em></p>
+<p>So far, the majority of my blog posts concentrate on aspects of Quantum Computing. Today I&rsquo;d like to shift gears to the other side of my research: Federated Learning (FL). My goal is to glean a better intuitive understanding of the mathematical equations that represent the FL framework. I start with Saheed Tijani&rsquo;s article &ldquo;Federated Learning: Why, What and How&rdquo; that was posted on LinkedIn on 14 April 2020.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> While this piece does not go into any of the mathematical equations, it introduces the FL framework, thereby serving as a nice overview of the system.</p>
+<h3 id="summary">Summary</h3>
+<hr>
+<h4 id="the-situation">The Situation</h4>
+<p>Much quality data floats around the web. Social media sites harbor images and text with potential for training sophisticated algorithms, such as those leveraged by <a href="https://en.wikipedia.org/wiki/AlphaGo">AlphaGo</a>, a program that in 2015 successfully beat a human champion during a game of Go. Quality data is untapped potential that could train more algorithms to perform exciting tasks.</p>
+<p>Strict data protection laws across many parts of the globe restrict programmers' access to this data. To use the data, programmers must ensure that no one&rsquo;s privacy is undermined.</p>
+<h4 id="conceptual-view-of-fl">Conceptual View of FL</h4>
+<p>FL is like a federation of states in which a group of partially self-governing states are joined by an overarching form of governance. It is a system of edge devices that individually collect data to train personalized algorithms that are periodically collected to refine an overarching algorithm which is then redistributed.</p>
+<p>FL is a type of distributed learning but is different than High Performance Computing (HPC). The motivation behind HPC is to &ldquo;spread out&rdquo; a collection of data across multiple machines to reduce time required for learning. FL attempts to reach data from multiple machines, regardless of location, to train its algorithm. Since different types of machines have disjoint data, FL must account for non-IID data.</p>
+<h4 id="fl-architecture-and-process">FL Architecture and Process</h4>
+<p>FL has a curator (the central server) that is in charge of the main training algorithm and coordinating activities with its network of (potentially millions of) edge devices.</p>
+<ol>
+<li>Curator sends edge devices current global model weights (the learning algorithm);</li>
+<li>Edge devices learn independently;</li>
+<li>Edge devices return new individual algorithms to curator;</li>
+<li>Individual algorithms are aggregated (the weights are averaged);</li>
+<li>The main training algorithm is updated;</li>
+<li>The above steps are repeated until an accuracy condition is met or a defined number of cycles is completed.</li>
+</ol>
+<p>Notice that FL is best suited for deep learning rather than other types of machine learning.</p>
+<p>During the learning process, data is never transfered from edge devices: only model weights are shared. Hence FL is more secure privacy-wise than other learning frameworks. It is also communcation efficient by greatly reducing the amount of information that needs to be communicated.</p>
+<h4 id="in-the-real-world">In the Real World</h4>
+<p>FL is already being used for applications such as <a href="https://blog.google/products/search/gboard-now-on-android/">GBoard</a>, a next word prediction software that is available on android cellphones. In this case, the curator is the Android server, and the edge devices are all of the mobile devices running the Android operating system.</p>
+<p>Potential uses of FL might include an anonymous Bureau of Meteorology, where multiple weather stations observing rainfall share their learned model weights. In this way, the amount of information communicated is greatly reduced, saving time and computational power.</p>
+<p>Another use could be a hypothetical linked commercial bank and e-commerce economy. The learning algorithm would be tasked with predicting product purchases and would learn from data collected at both the bank and the economy. Both institutions would train their own (disjoint) models that would be later shared with the curator. No private or individual information is ever shared, so all customers maintain their privacy.</p>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Tijani, S., &amp; Follow. (2020, April 14). Federated Learning: Why, What and How? LinkedIn. <a href="https://www.linkedin.com/pulse/federated-learning-why-what-how-saheed-tijani">https://www.linkedin.com/pulse/federated-learning-why-what-how-saheed-tijani</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
