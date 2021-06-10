@@ -28,14 +28,14 @@ On 29 January 2019, the MIT Technology Review published an article1 by Martin Gi
     </item>
     
     <item>
-      <title>Understanding Mathematical Theory Behind TensorFlow Quantum for Hybrid Learning</title>
+      <title>Understanding Mathematical Theory Behind TensorFlow Quantum for Hybrid Learning (draft)</title>
       <link>https://adbrei.github.io/qfl-research/posts/post4/</link>
       <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adbrei.github.io/qfl-research/posts/post4/</guid>
       <description>(Last updated: June 8, 2021)
-The paper &amp;ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&amp;rdquo; by Michael Broughton, et al. introdues the TensorFlow Quantum library with respect to implementing hybrid models that handle classical or quantum data 1. In this post, I attempt to give a brief explaination of the equations given in Section III, &amp;ldquo;Theory of Hybrid Quantum-Classical Machine Learning.&amp;rdquo;
-Equation (1) This equation can be considered the starting point for our Quantum Neural Network.</description>
+Please note, this draft is a work in progress. For the next few days, I will continue to write here about the equations as I better understand them. Once finalized, I will update the publication date.
+The paper &amp;ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&amp;rdquo; by Michael Broughton, et al. introdues the TensorFlow Quantum library with respect to implementing hybrid models that handle classical or quantum data 1.</description>
     </item>
     
     <item>
