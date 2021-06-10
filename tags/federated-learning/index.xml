@@ -6,7 +6,17 @@
     <description>Recent content in Federated Learning on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/federated-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/federated-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Literature Review: &#39;&#39;How to Read a Paper&#39;&#39;</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post7/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post7/</guid>
+      <description>(Last updated: June 10, 2021)
+Over the course of this summer, I intend to read many papers related to quantum computing and federated learning. So far, most of my blog posts have been about articles and tutorials published online. However in the next few days, I hope to share a few posts about peer-reviewed papers. These are generally more complicated to read through and understand, and they are hard to write about.</description>
+    </item>
+    
     <item>
       <title>Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;</title>
       <link>https://adbrei.github.io/qfl-research/posts/post6/</link>
