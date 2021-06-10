@@ -49,5 +49,15 @@ There exist a plethora of methods of computation. The most commonly used computa
 Classical Computing Also known as binary computing, classical computing is a system of computation that uses bits (represented by 0 and 1) to logically store and manipulate information. Historically, all computers from Babbage&amp;rsquo;s theoretical &amp;ldquo;analytical machine&amp;rdquo; to the supercomputers produced by Hewlett Packard Enterprise&amp;rsquo;s subsidiary, Cray Inc.</description>
     </item>
     
+    <item>
+      <title>Intro to My Research</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post1/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post1/</guid>
+      <description>Federated Deep Learning on Quantum Computers Welcome to my blog about my undergraduage honors computer science research! I am excited to start working this summer in preparation for my senior year at William &amp;amp; Mary.
+Brief Summary Many edge devices, such as cell phones, contribute to and require feedback from a shared deep learning algorithm hosted on a server. For example, Siri, Next-Word-Prediction, and other messaging apps include auto-complete features that attempt to finish users’ words or sentences.</description>
+    </item>
+    
   </channel>
 </rss>

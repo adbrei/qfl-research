@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adbrei.github.io/qfl-research/tags/federated-learning/</loc>
+    <loc>https://adbrei.github.io/qfl-research/posts/post7/</loc>
     <lastmod>2021-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adbrei.github.io/qfl-research/posts/post7/</loc>
+    <loc>https://adbrei.github.io/qfl-research/tags/performing-research/</loc>
     <lastmod>2021-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adbrei.github.io/qfl-research/posts/</loc>
@@ -16,6 +16,9 @@
   </url><url>
     <loc>https://adbrei.github.io/qfl-research/tags/</loc>
     <lastmod>2021-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adbrei.github.io/qfl-research/tags/federated-learning/</loc>
+    <lastmod>2021-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adbrei.github.io/qfl-research/posts/post6/</loc>
     <lastmod>2021-06-09T00:00:00+00:00</lastmod>
@@ -39,9 +42,6 @@
     <lastmod>2021-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adbrei.github.io/qfl-research/posts/post1/</loc>
-    <lastmod>2021-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adbrei.github.io/qfl-research/tags/quantum-federated-learning/</loc>
     <lastmod>2021-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adbrei.github.io/qfl-research/about/</loc>
