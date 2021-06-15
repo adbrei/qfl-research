@@ -6,7 +6,18 @@
     <description>Recent content in Federated Learning on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/federated-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/federated-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Pass: &#39;&#39;TensorFlow Quantum&#39;&#39; Paper</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post8/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post8/</guid>
+      <description>(Last updated: June 15, 2021)
+In my last post, I summarized &amp;ldquo;How to Read a Paper&amp;rdquo;1 with the Three-Pass method. Now, I would like to apply this algorithm to one paper especially significant to my research: “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.”2. In this post, I perform the first pass. This paper is worth a second pass, since it is directly relevant to my research.
+ Review of First Pass (from previous post) Without reading details or illustrations, get a general understanding of the paper&amp;rsquo;s topic and how it will approach the topic.</description>
+    </item>
+    
     <item>
       <title>Literature Review: &#39;&#39;Federated Learning: Why, What and How&#39;&#39;</title>
       <link>https://adbrei.github.io/qfl-research/posts/post6/</link>

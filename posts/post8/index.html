@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>First Pass: &#39;&#39;TensorFlow Quantum&#39;&#39; Paper // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="First Pass: &#39;&#39;TensorFlow Quantum&#39;&#39; Paper"/>
+<meta name="twitter:description" content="(Last updated: June 15, 2021)
+In my last post, I summarized &ldquo;How to Read a Paper&rdquo;1 with the Three-Pass method. Now, I would like to apply this algorithm to one paper especially significant to my research: “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.”2. In this post, I perform the first pass. This paper is worth a second pass, since it is directly relevant to my research.
+ Review of First Pass (from previous post) Without reading details or illustrations, get a general understanding of the paper&rsquo;s topic and how it will approach the topic."/>
+
+    <meta property="og:title" content="First Pass: &#39;&#39;TensorFlow Quantum&#39;&#39; Paper" />
+<meta property="og:description" content="(Last updated: June 15, 2021)
+In my last post, I summarized &ldquo;How to Read a Paper&rdquo;1 with the Three-Pass method. Now, I would like to apply this algorithm to one paper especially significant to my research: “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.”2. In this post, I perform the first pass. This paper is worth a second pass, since it is directly relevant to my research.
+ Review of First Pass (from previous post) Without reading details or illustrations, get a general understanding of the paper&rsquo;s topic and how it will approach the topic." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-15T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-15T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">First Pass: &#39;&#39;TensorFlow Quantum&#39;&#39; Paper</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 15, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p><em>(Last updated: June 15, 2021)</em></p>
+<p>In my last post, I summarized <a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">&ldquo;How to Read a Paper&rdquo;</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> with the Three-Pass method. Now, I would like to apply this algorithm to one paper especially significant to my research: <a href="https://arxiv.org/pdf/2003.02989.pdf">“TensorFlow Quantum: A Software Framework for Quantum Machine Learning.”</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+In this post, I perform the first pass. This paper is worth a second pass, since it is directly relevant to my research.</p>
+<hr>
+<h3 id="review-of-first-pass-from-previous-post">Review of First Pass (from previous post)</h3>
+<p>Without reading details or illustrations, get a general understanding of the paper&rsquo;s topic and how it will approach the topic. Determine the paper&rsquo;s category, context, correctness, contributions, and clarity (the 5 C&rsquo;s). After this pass, you should be able to determine whether or not the paper is worth the second pass.</p>
+<ol>
+<li>Read title, abstract, introduction</li>
+<li>Read section, subsection headings</li>
+<li>Read conclusions</li>
+<li>Glance at references</li>
+</ol>
+<h3 id="1-read-title-abstract-introduction">1. Read Title, Abstract, Introduction</h3>
+<h4 id="title">Title:</h4>
+<p>&ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&rdquo;</p>
+<h4 id="abstract">Abstract:</h4>
+<p>TensorFlow := open source library that allows you to create hybrid quantum-classical machine learning models</p>
+<p>This paper introduces the software architecture and building blocks behind TensorFlow and the theory of (hybrid) quantum-classical machine learning (via neural networks). The paper applies the TensorFlow tools to supervised learning for quantum classification, control, and approximate optimization.</p>
+<h4 id="introduction">Introduction:</h4>
+<p>The introduction has four sections:</p>
+<ol>
+<li>Quantum Machine Learning</li>
+</ol>
+<blockquote>
+<p>An overview of machine learning and how quantum computing can be used to solve machine learning problems that are practically impossible for classical computers to solve.</p>
+</blockquote>
+<ol start="2">
+<li>Hybrid Quantum-Classical Models</li>
+</ol>
+<blockquote>
+<p>The reasons why hybrid models are currently more effective than purely quantum models: quantum processors are still near-term (not completely fault tolerant) and are primarily used as computational accelerators.</p>
+</blockquote>
+<ol start="3">
+<li>Quantum Data</li>
+</ol>
+<blockquote>
+<p>What quantum data is, and four different classes: quantum simulations, quantum communication networks, quantum metrology, quantum control.</p>
+</blockquote>
+<ol start="4">
+<li>TensorFlow Quantum</li>
+</ol>
+<blockquote>
+<p>The role of TensorFlow in building quantum models: a bridge between machine learning and quantum computing communities.</p>
+</blockquote>
+<h3 id="2-read-section-subsection-headings">2. Read Section, Subsection Headings</h3>
+<p>The relatively long paper (39 pages) has a table of contents with five main sections before the closing remarks, acknowledgements, and references.</p>
+<ol>
+<li>Introduction (see above)</li>
+<li>&ldquo;Software Architecture &amp; Building Blocks&rdquo;: An introduction to Cirq language and TensorFlow to build quantum circuits</li>
+<li>&ldquo;Theory of Hybrid Quantum-Classical Machine Learning&rdquo;: An overview of the mathematical equations behind hybrid machine learning.</li>
+<li>&ldquo;Basic Quantum Applications&rdquo;: Examples of how to use TensorFlow features on <em>basic applications</em></li>
+<li>&ldquo;Advanced Quantum Applications&rdquo;: Examples of how to use TensorFlow features on <em>advanced applications</em></li>
+</ol>
+<h3 id="3-read-conclusions">3. Read Conclusions</h3>
+<p>The Closing Remarks is a short paragraph that places TensorFlow into the real-world environment of quantum hardware development.</p>
+<h3 id="4-glance-at-references">4. Glance at References</h3>
+<p>There are 129 references from textbooks, papers and conferences. I will continue to look at this list as the need arises.</p>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Keshav, S. “How to Read a Paper.” ACM SIGCO&gt;MM Computer Communication Review, vol. 37, no. 3, 2007, pp. 83–84., doi:10.1145/1273445.1273458.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Broughton, Michael, et al. “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.” ArXiv.org, 6 Mar. 2020, arxiv.org/abs/2003.02989.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
