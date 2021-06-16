@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Matrices Behind Quantum Logic Gates // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Matrices Behind Quantum Logic Gates"/>
+<meta name="twitter:description" content="The following post is a simple introduction to how quantum gates relate to matrices.
+A Quantum Neural Network: Quantum neural networks are made up of layers nodes connected by edges. Here, we imagine each node as a quantum gate which receives an input matrix and passes an output matrix to the next layer of gates. Mathematically, these gates are unitaries, matrices with special properties (where the conjugate transpose is equivalent to the matrix inverse1)."/>
+
+    <meta property="og:title" content="Matrices Behind Quantum Logic Gates" />
+<meta property="og:description" content="The following post is a simple introduction to how quantum gates relate to matrices.
+A Quantum Neural Network: Quantum neural networks are made up of layers nodes connected by edges. Here, we imagine each node as a quantum gate which receives an input matrix and passes an output matrix to the next layer of gates. Mathematically, these gates are unitaries, matrices with special properties (where the conjugate transpose is equivalent to the matrix inverse1)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post9/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-16T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-16T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Matrices Behind Quantum Logic Gates</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 16, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p>The following post is a simple introduction to how quantum gates relate to matrices.</p>
+<h3 id="a-quantum-neural-network">A Quantum Neural Network:</h3>
+<p><img src="nn1.png" alt="Quantum neural network" title="Quantum Neural Network"></p>
+<p>Quantum neural networks are made up of layers nodes connected by edges. Here, we imagine each node as a quantum gate which receives an input matrix and passes an output matrix to the next layer of gates. Mathematically, these gates are <a href="https://mathworld.wolfram.com/UnitaryMatrix.html">unitaries</a>, matrices with special properties (where the conjugate transpose is equivalent to the matrix inverse<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>).</p>
+<h3 id="qubits">Qubits</h3>
+<p>Qubits are the quantum equivalent to the classical bit. Classical bits, represented by 0 and 1 and manipulated by Boolean Algebra, are the building blocks of classical computers. Qubits, represented by 0, 1, or superposition of the two, are the building blocks of quantum computers<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>A qubit is represented by a vector that determines its probability of being either 1 or 0. Its computational bases are 0 and 1, which can be represented as either ket vectors or column vectors:</p>
+<p><img src="bases.png" alt="Qubit Bases" title="Qubit's Bases"></p>
+<h3 id="quantum-gates--matrices">Quantum Gates &amp; Matrices</h3>
+<p>How do quantum gates, matrices, and qubits relate? Qubits are the number system in this mathematical quantum universe, and matrices serve as the quantum logic gates.</p>
+<p>For example, let us consider the Pauli-X gate, which is used to flip between the bases<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p><img src="gate.png" alt="Pauli-X Gate" title="Pauli-X Gate"></p>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>“Unitary Matrix.” Wolfram MathWorld, mathworld.wolfram.com/UnitaryMatrix.html.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Voorhoede, De. “What Is a Qubit?” Quantum Inspire, <a href="http://www.quantum-inspire.com/kbase/what-is-a-qubit/">www.quantum-inspire.com/kbase/what-is-a-qubit/</a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Coggins, Macauley. “Matrix Representations of Quantum Logic Gates.” Quantum Computing UK, Quantum Computing UK, 13 May 2020, quantumcomputinguk.org/tutorials/introduction-to-quantum-logic-gates-and-matrices.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
