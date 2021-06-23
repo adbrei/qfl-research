@@ -6,14 +6,15 @@
     <description>Recent content in Posts on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Overview of TensorFlowQuantum Building Blocks</title>
       <link>https://adbrei.github.io/qfl-research/posts/post10/</link>
-      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adbrei.github.io/qfl-research/posts/post10/</guid>
-      <description>What is TensorFlow Quantum? In the world, there exists two Google software products belonging to two separate communities:
+      <description>This post explores Part II, &amp;ldquo;Software Archtecture &amp;amp; Building Blocks,&amp;rdquo; of the paper &amp;ldquo;TensorFlow Quantum: A Software Framework for Quantum Machine Learning&amp;rdquo; paper.
+What is TensorFlow Quantum? In the world, there exists two Google software products belonging to two separate communities:
   Cirq, used by the quantum computing world, is a tool to build quantum circuits     TensorFlow, used by the machine learning world, is a tool to build machine learning algorithms   The TensorFlow Quantum library bridges these communities into a hybrid world, quantum machine learning.</description>
     </item>
     
