@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Overview of TensorFlowQuantum Building Blocks // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Overview of TensorFlowQuantum Building Blocks"/>
+<meta name="twitter:description" content="What is TensorFlow Quantum? In the world, there exists two Google software products belonging to two separate communities:
+  Cirq, used by the quantum computing world, is a tool to build quantum circuits     TensorFlow, used by the machine learning world, is a tool to build machine learning algorithms   The TensorFlow Quantum library bridges these communities into a hybrid world, quantum machine learning."/>
+
+    <meta property="og:title" content="Overview of TensorFlowQuantum Building Blocks" />
+<meta property="og:description" content="What is TensorFlow Quantum? In the world, there exists two Google software products belonging to two separate communities:
+  Cirq, used by the quantum computing world, is a tool to build quantum circuits     TensorFlow, used by the machine learning world, is a tool to build machine learning algorithms   The TensorFlow Quantum library bridges these communities into a hybrid world, quantum machine learning." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post10/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-22T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-22T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Overview of TensorFlowQuantum Building Blocks</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 22, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<h3 id="what-is-tensorflow-quantum">What is TensorFlow Quantum?</h3>
+<p><img src="TFQ.png" alt="TensorFlow Quantum" title="TensorFlow Quantum"></p>
+<p>In the world, there exists two Google software products belonging to two separate communities:</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/quantumlib/Cirq">Cirq</a>, used by the quantum computing world, is a tool to build quantum circuits</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://www.tensorflow.org">TensorFlow</a>, used by the machine learning world, is a tool to build machine learning algorithms</li>
+</ul>
+</blockquote>
+<p>The <a href="https://www.tensorflow.org/quantum/">TensorFlow Quantum library</a> bridges these communities into a hybrid world, <a href="https://en.wikipedia.org/wiki/Quantum_machine_learning">quantum machine learning.</a></p>
+<hr>
+<h3 id="introduction-to-tensorflow-quantum">Introduction to TensorFlow Quantum</h3>
+<p>The TensorFlow Quantum paper<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> provides discussions of the following:</p>
+<ol>
+<li>The tools' individual capabilities</li>
+<li>Challenges of combining the tools</li>
+<li>Ideas behind architecture of combination</li>
+<li>Overview of performance</li>
+</ol>
+<h4 id="the-tools-individual-capabilities">The tools' individual capabilities</h4>
+<p>Both tools are languages that deal with the elements required by each community.</p>
+<ol>
+<li>
+<p>Cirq makes it possible to build quantum circuits using qubits, gates, circuits, and measurement operators. These circuits can be operated on simulations of quantum computers or actual near term hardware.</p>
+</li>
+<li>
+<p>TensorFlow makes it possible to build computations visually with stateful dataflow graphs made up of tensors (directed edges) and operations (nodes).</p>
+</li>
+</ol>
+<h4 id="challenges-of-combining-the-tools">Challenges of combining the tools</h4>
+<p>The straight-forward approach: States-as-edges architecture</p>
+<blockquote>
+<p>TensorFlow graph edges = Cirq quantum states<br>
+TensorFlow operations = Cirq state transformations</p>
+</blockquote>
+<p>This architecture has proved to be suboptimal for the following reasons:</p>
+<ol>
+<li>The graph must be rebuilt every time a different circuit is run</li>
+<li>There is no easy way to embed a quantum dataflow graph on a quantum processor</li>
+<li>It&rsquo;s difficult to define quantum gates and measurements within TensorFlow</li>
+</ol>
+<p>For these reasons, TFQ does not implement the states-as-edges architecture, though the system motivates many core design principles.</p>
+<h4 id="ideas-behind-architecture-of-combination">Ideas behind architecture of combination</h4>
+<p>TFQ has four design principles:</p>
+<ol>
+<li>
+<p><strong>Differentiability:</strong> the system must support operations from calculus (e.g. differentiability) since this is the key computation in back-propagation;</p>
+</li>
+<li>
+<p><strong>Circuit batching:</strong> the system must support re-running parameterized model circuits, since it handles quantum data;</p>
+</li>
+<li>
+<p><strong>Execution backend agnostic:</strong> the system must support running and comparing a model in both a simulation and real hardware;</p>
+</li>
+<li>
+<p><strong>Minimalism:</strong> since both Cirq and TensorFlow offer a large and well-defined set of tools to their respective communities, the system should try to leverage these tools as much as possible, so that users don&rsquo;t need to unnecessarily re-learn a new interface.</p>
+</li>
+</ol>
+<p>The system is set up with the following in mind:</p>
+<ul>
+<li>
+<p>TensorFlow tensors (edges) = Cirq circuits and other quantum computing constructs</p>
+</li>
+<li>
+<p>TensorFlow Operators (nodes) = the conversion of Cirq tensors into classical data (where Cirq objects become TensorFlow string flows).</p>
+</li>
+</ul>
+<p>The TensorFlow Quantum paper provides a detailed bottom-up overview of the design. Below is an annotated illustration of the TFQ software stack. On the top of the stack is the user&rsquo;s input data to be processed, and on the bottom is the hardware. Orange boxes are elements native to TensorFlow. Blue boxes are elements added by TensorFlow Quantum to integrate Quantum Computing.</p>
+<p><img src="stack.png" alt="TensorFlow Quantum Software Stack" title="TensorFlow Quantum Software Stack"></p>
+<p>Below is an abstract illustration of the TFQ pipeline that summarizes the execution steps performed by a minimum working example:</p>
+<p><img src="pipeline.png" alt="TensorFlow Quantum Pipeline" title="TensorFlow Quantum Pipeline"></p>
+<p>More detailed technical explainations with minimum working examples can be found in the paper<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Broughton, Michael, et al. “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.” ArXiv.org, 6 Mar. 2020, arxiv.org/abs/2003.02989.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
