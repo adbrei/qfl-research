@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing</title>
+      <link>https://adbrei.github.io/qfl-research/tags/publishing/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/tags/publishing/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Quantum Computing</title>
       <link>https://adbrei.github.io/qfl-research/tags/quantum-computing/</link>

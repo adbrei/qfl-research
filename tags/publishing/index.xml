@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publishing on Quantum Federated Learning Blog</title>
+    <link>https://adbrei.github.io/qfl-research/tags/publishing/</link>
+    <description>Recent content in Publishing on Quantum Federated Learning Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/publishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources: How to Write a Research Paper</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post11/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post11/</guid>
+      <description> List of Resources:  ACM: Information for Authors Submitting Arcticles to ACM Journals ACM Production Workflow Background How to write a computer science paper Writing a (Computer Science) Paper Tips for writing a good quality Computer Science Research Paper Computer Science Research Guide  </description>
+    </item>
+    
+  </channel>
+</rss>
