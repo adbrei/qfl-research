@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the Multilayer Quantum Neural Network</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post12/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post12/</guid>
+      <description>The TensorFlow Quantum paper by Broughton, et al. Section III Theory of Hybrid Quantum Classical Machine Learning uses a graph to demonstrate the inner workings of a multilayer quantum neural network1. Here, we attempt to break the graphic down, piece by piece, to understand what is happening.
+The Diagram by Broughton, et al. The caption describes from the lowest level to the highest level. In this way, it first covers the most detailed aspects and then becomes more general.</description>
+    </item>
+    
     <item>
       <title>Resources: How to Write a Research Paper</title>
       <link>https://adbrei.github.io/qfl-research/posts/post11/</link>

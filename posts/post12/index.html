@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Understanding the Multilayer Quantum Neural Network // Quantum Federated Learning Blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anneliese Brei" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adbrei.github.io/qfl-research/css/main.min.92685b1b9cb7abb4f18440ce53b74e04bee915cf99e025bab54dc2939d0b7eab.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understanding the Multilayer Quantum Neural Network"/>
+<meta name="twitter:description" content="The TensorFlow Quantum paper by Broughton, et al. Section III Theory of Hybrid Quantum Classical Machine Learning uses a graph to demonstrate the inner workings of a multilayer quantum neural network1. Here, we attempt to break the graphic down, piece by piece, to understand what is happening.
+The Diagram by Broughton, et al. The caption describes from the lowest level to the highest level. In this way, it first covers the most detailed aspects and then becomes more general."/>
+
+    <meta property="og:title" content="Understanding the Multilayer Quantum Neural Network" />
+<meta property="og:description" content="The TensorFlow Quantum paper by Broughton, et al. Section III Theory of Hybrid Quantum Classical Machine Learning uses a graph to demonstrate the inner workings of a multilayer quantum neural network1. Here, we attempt to break the graphic down, piece by piece, to understand what is happening.
+The Diagram by Broughton, et al. The caption describes from the lowest level to the highest level. In this way, it first covers the most detailed aspects and then becomes more general." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adbrei.github.io/qfl-research/posts/post12/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-19T00:00:00&#43;00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adbrei.github.io/qfl-research/"><img class="app-header-avatar" src="/qfl-research/network.png" alt="Anneliese Brei" /></a>
+      <h1>Quantum Federated Learning Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/qfl-research/">Posts</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/tags/">Topics</a>
+            -
+          
+          <a class="app-header-menu-item" href="/qfl-research/about/">About</a>
+      </nav>
+      <p>A University Student&#39;s Honors Research</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/adbrei" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/anneliese-brei-b19907205" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Understanding the Multilayer Quantum Neural Network</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 19, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <hr>
+<p>The TensorFlow Quantum paper by Broughton, <em>et al.</em> Section III <em>Theory of Hybrid Quantum Classical Machine Learning</em> uses a graph to demonstrate the inner workings of a multilayer quantum neural network<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Here, we attempt to break the graphic down, piece by piece, to understand what is happening.</p>
+<h3 id="the-diagram-by-broughton-et-al">The Diagram by <em>Broughton, et al.</em></h3>
+<p><img src="para-q-circuit.png" alt="Complete diagram from paper" title="Complete diagram"></p>
+<p>The caption describes from the lowest level to the highest level. In this way, it first covers the most detailed aspects and then becomes more general. However, this is a front-heavy approach. In my post, I re-iterate the caption in my own words, starting with the highest level and proceeding to the lowest level.</p>
+<h4 id="the-unitary">The Unitary</h4>
+<p>The paper labels the highest level graphic as (d). It shows a general unitary representing the entire quantum model. It can be considered a black box which receives input and produces results as output.</p>
+<p>In the next level, (c), U is equivallent to the product of multiple smaller unitaries, named V. The multiple horizontal lines indicate that V is multi-parametereized, e.g. it accepts more than one input at a time. I believe these inputs are processed in parallel.</p>
+<p>In (b), V is made up of the product of many quantum gates named W. These accept only a single input at a time.</p>
+<p>Finally (a) shows that each W is composed of exponentials working with single-qubit operations.</p>
+<h3 id="references">References</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Broughton, Michael, et al. “TensorFlow Quantum: A Software Framework for Quantum Machine Learning.” ArXiv.org, 6 Mar. 2020, arxiv.org/abs/2003.02989.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer>
+        <div>
+          <hr>
+          <p><small>Copyright © 2021 Anneliese Brei</small></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
