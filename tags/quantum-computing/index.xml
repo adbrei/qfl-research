@@ -6,7 +6,17 @@
     <description>Recent content in Quantum Computing on Quantum Federated Learning Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the Multilayer Quantum Neural Network</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post13/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post13/</guid>
+      <description>Here I provide handwritten notes for a research snippet provided by TensorFlow: https://github.com/tensorflow/quantum/blob/research/binary_classifier/binary_classifier.ipynb
+More information regarding Bloch spheres.</description>
+    </item>
+    
     <item>
       <title>Understanding the Multilayer Quantum Neural Network</title>
       <link>https://adbrei.github.io/qfl-research/posts/post12/</link>
