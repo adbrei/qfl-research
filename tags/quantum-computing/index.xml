@@ -18,6 +18,16 @@ https://learn.qiskit.org/course/introduction/why-quantum-computing</description>
     </item>
     
     <item>
+      <title>Notes from Qiskit: Intro to Quantum Computing</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post18/</link>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post18/</guid>
+      <description>Below I provide handwritten notes summarizing Chapter 1 &amp;ldquo;Why Quantum Computing&amp;rdquo; from the Qiskit &amp;ldquo;Introduction to Quantum Computing&amp;rdquo; 3-hour tutorial.
+https://learn.qiskit.org/course/introduction/the-atoms-of-computation</description>
+    </item>
+    
+    <item>
       <title>Advantages of Quantum Computing</title>
       <link>https://adbrei.github.io/qfl-research/posts/post16/</link>
       <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
@@ -38,16 +48,6 @@ https://learn.qiskit.org/course/introduction/why-quantum-computing</description>
       <guid>https://adbrei.github.io/qfl-research/posts/post15/</guid>
       <description>Below I provide handwritten notes summarizing a Youtube video that describes the basic mechanics behind quantum computers:
 https://www.youtube.com/watch?v=g_IaVepNDT4</description>
-    </item>
-    
-    <item>
-      <title>Review of Neural Networks: Math &amp; Code</title>
-      <link>https://adbrei.github.io/qfl-research/posts/post14/</link>
-      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adbrei.github.io/qfl-research/posts/post14/</guid>
-      <description>Below I provide handwritten notes summarizing a blog post about Neural Networks:
-https://pub.towardsai.net/building-neural-networks-from-scratch-with-python-code-and-math-in-detail-i-536fae5d7bbf</description>
     </item>
     
     <item>
