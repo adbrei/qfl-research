@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adbrei.github.io/qfl-research/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Notes from Qiskit Part 2: Intro to Quantum Computing</title>
+      <link>https://adbrei.github.io/qfl-research/posts/post18/</link>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adbrei.github.io/qfl-research/posts/post18/</guid>
+      <description>Below I provide handwritten notes summarizing Chapter 2 &amp;ldquo;The Atoms of Computation&amp;rdquo; from the Qiskit &amp;ldquo;Introduction to Quantum Computing&amp;rdquo; 3-hour tutorial.
+https://learn.qiskit.org/course/introduction/the-atoms-of-computation</description>
+    </item>
+    
+    <item>
       <title>Notes from Qiskit: Intro to Quantum Computing</title>
       <link>https://adbrei.github.io/qfl-research/posts/post17/</link>
       <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
@@ -15,16 +25,6 @@
       <guid>https://adbrei.github.io/qfl-research/posts/post17/</guid>
       <description>Below I provide handwritten notes summarizing Chapter 1 &amp;ldquo;Why Quantum Computing&amp;rdquo; from the Qiskit &amp;ldquo;Introduction to Quantum Computing&amp;rdquo; 3-hour tutorial.
 https://learn.qiskit.org/course/introduction/why-quantum-computing</description>
-    </item>
-    
-    <item>
-      <title>Notes from Qiskit: Intro to Quantum Computing</title>
-      <link>https://adbrei.github.io/qfl-research/posts/post18/</link>
-      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adbrei.github.io/qfl-research/posts/post18/</guid>
-      <description>Below I provide handwritten notes summarizing Chapter 1 &amp;ldquo;Why Quantum Computing&amp;rdquo; from the Qiskit &amp;ldquo;Introduction to Quantum Computing&amp;rdquo; 3-hour tutorial.
-https://learn.qiskit.org/course/introduction/the-atoms-of-computation</description>
     </item>
     
     <item>
